@@ -6,6 +6,7 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "pubnub": "^4.0.8",
     "stripe": "^4.9.1"
   },
   "devDependencies": {},

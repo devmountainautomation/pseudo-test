@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="stripeDemo">
+  <head>
+    <meta charset="utf-8">
+    <title>Stripe Demo</title>
+  </head>
+  <body>
+    <input ng-model="price" />
+    <form action="/api/pay" method="POST" id="stripeForm">
+      <input type="hidden" name="price" value="{{price}}" />
+      <script
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="pk_test_eyNiXHE1momxCbPVWZseWG9Y"
+        data-name="Stripe Demo"
+        data-description="None of this is real"
+        data-image="http://pre10.deviantart.net/1fb0/th/pre/f/2012/217/7/7/pre_cut_cat_stock_png_by_juleesan-d59yut3.png"
+        data-locale="auto">
+      </script>
+    </form>
+
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.js" charset="utf-8"></script>
+
+
+      <!-- <stripe-payment></stripe-payment> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.js" charset="utf-8"></script>
+    <script src="./app.js" charset="utf-8"></script>
+  </body>
+</html>
